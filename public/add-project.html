@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Add Project</h1>
+  <form action="/add-project" method="post">
+    <label for="name">Project Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="description">Project Description:</label>
+    <textarea id="description" name="description" required readonly></textarea>
+
+    <label for="url">Project URL:</label>
+    <input type="url" id="url" name="url" required>
+
+    <input type="submit" value="Add Project">
+  </form>
+    <div class="toggle-dark-mode">
+      <img src="moon.svg" onclick="toggleDarkMode()" alt="Darkmode toggle">
+    </div>
+  <footer>
+    <p>Created by <a href="https://github.com/arozx/ideas">arozx</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

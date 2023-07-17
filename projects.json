@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Task Management App",
+      "description": "Create a web application to manage tasks and to-do lists.",
+      "difficulty": "Intermediate",
+      "tags": ["JavaScript", "React", "Node.js", "MongoDB"]
+    },
+    {
+      "name": "E-commerce Website",
+      "description": "Build an online store to sell products with shopping cart functionality.",
+      "difficulty": "Advanced",
+      "tags": ["HTML", "CSS", "JavaScript", "Node.js", "Express", "MongoDB"]
+    },
+    {
+      "name": "Weather Application",
+      "description": "Develop a weather app that displays the current weather and forecast for a location.",
+      "difficulty": "Beginner",
+      "tags": ["HTML", "CSS", "JavaScript", "API"]
+    },
+    {
+      "name": "Social Media Platform",
+      "description": "Create a social media platform where users can connect, share posts, and interact with each other.",
+      "difficulty": "Advanced",
+      "tags": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"]
+    },
+    {
+      "name": "Recipe Finder",
+      "description": "Build a recipe search application that allows users to find and explore recipes.",
+      "difficulty": "Intermediate",
+      "tags": ["HTML", "CSS", "JavaScript", "API"]
+    }
+]
+  
