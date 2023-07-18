@@ -5,19 +5,20 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #C4DFDF;
 }
 
 body.dark-mode {
-  background-color: #333;
+  background-color: #2D4356;
 }
 
-h1 {
-  color: #333;
+h1, h2, p {
+  color: #000000;
   margin-bottom: 20px;
 }
 
-.dark-mode h1 {
-  color: #fff;
+.dark-mode h1, h2, p {
+  color: #EAB2A0;
 }
 
 form {
@@ -58,7 +59,7 @@ input[type="url"] {
 
 input[type="submit"],
 button {
-  background-color: #4CAF50;
+  background-color: #A78295;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -68,7 +69,7 @@ button {
 
 .dark-mode input[type="submit"],
 .dark-mode button {
-  background-color: #007bff;
+  background-color: #A76F6F;
 }
 
 input[type="submit"]:hover,
@@ -78,7 +79,7 @@ button:hover {
 
 .dark-mode input[type="submit"]:hover,
 .dark-mode button:hover {
-  background-color: #0069d9;
+  background-color: #A76F6F;
 }
 
 main {
@@ -90,7 +91,7 @@ main {
 }
 
 footer {
-  background-color: #f5f5f5;
+  background-color: #D2E9E9;
   padding: 10px;
   text-align: center;
   position: fixed;
@@ -100,8 +101,8 @@ footer {
 }
 
 .dark-mode footer {
-  background-color: #111;
-  color: #fff;
+  background-color: #435B66;
+  color: #EAB2A0;
 }
 
 .toggle-dark-mode {
