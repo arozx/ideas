@@ -120,11 +120,8 @@ app.get('/projects', (req, res) => {
   });
 });
 
-// Route to serve the add project form
-app.get('/add-project', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'add-project.html'));
-});
-
+// app.js
+// ... (previous code)
 // Route to handle adding a project
 app.post('/add-project', (req, res) => {
   const { name, description, difficulty, tags } = req.body;
@@ -169,19 +166,18 @@ app.post('/add-project', (req, res) => {
       const projects = JSON.parse(data);
       projects.push(newProject);
 
-      fs.writeFile(projectsFile, JSON.stringify(projects), err => {
+      fs.writeFile(projectsFile, JSON.stringify(projects), (err) => {
         if (err) {
           console.error(err);
           res.status(500).send('Internal Server Error');
         } else {
-          res.redirect('/project');
+          // Instead of redirecting, return JSON response with the redirection URL
+          res.status(200).json({ redirectUrl: '/project' });
         }
       });
     }
   });
 });
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
-});
+
+export default app;
