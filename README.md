@@ -75,7 +75,7 @@ npm install
 To run the program use the following comand
 
 ```sh
-node app.js
+node server.js
 ```
 
 <!-- LICENSE -->
