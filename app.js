@@ -120,8 +120,21 @@ app.get('/projects', (req, res) => {
   });
 });
 
-// app.js
-// ... (previous code)
+// Route to handle adding a project
+app.get('/add-project', (req, res) => {
+  const addProjectFilePath = path.join(__dirname, 'public', 'add-project.html');
+
+  fs.readFile(addProjectFilePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send('Internal Server Error');
+    } else {
+      res.setHeader('Content-Type', 'text/html');
+      res.send(data);
+    }
+  });
+});
+
 // Route to handle adding a project
 app.post('/add-project', (req, res) => {
   const { name, description, difficulty, tags } = req.body;

@@ -84,10 +84,20 @@ button:hover {
 
 main {
   flex-grow: 1;
+  margin-bottom: 80px;
 }
 
 .dark-mode main {
   color: #333;
+}
+
+.content > div {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-height: 150px; /* Set the maximum height of the container */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
 }
 
 footer {

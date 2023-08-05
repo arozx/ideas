@@ -31,3 +31,33 @@ window.addEventListener('DOMContentLoaded', function () {
     darkModeToggle.src = 'moon.svg'; // Relative path to the moon image
   }
 });
+
+const projectForm = document.getElementById('projectForm');
+
+projectForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  const nameInput = document.getElementById('name');
+  const descriptionInput = document.getElementById('description');
+  const difficultyInput = document.getElementById('difficulty');
+  const tagsInput = document.getElementById('tags');
+
+  // Client-side input validation
+  const maxNameLength = 50;
+  const maxDescriptionLength = 200;
+  const maxDifficultyLength = 12;
+  const maxTagLength = 50;
+
+  if (
+    nameInput.value.length > maxNameLength ||
+    descriptionInput.value.length > maxDescriptionLength ||
+    difficultyInput.value.length > maxDifficultyLength ||
+    tagsInput.value.split(',').some(tag => tag.length > maxTagLength)
+  ) {
+    alert('Input validation failed. Please check your inputs and try again.');
+    return; // Do not submit the form if validation fails
+  }
+
+  // If validation passes, submit the form
+  projectForm.submit();
+});
